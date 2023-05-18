@@ -90,6 +90,30 @@
     scroll-behavior: smooth;
   }
 }
+.dark-mode {
+  background-color: #1a1a1a; /* Set the background color to a dark color */
+  color: #ffffff; /* Set the text color to a light color */
+}
+
+.dark-mode .navbar {
+  background-color: #222222; /* Set the navbar background color to a darker shade */
+  /* Add any additional styles specific to the navbar in dark mode */
+}
+
+.dark-mode a {
+  color: #ffffff; /* Set the link color to a light color */
+}
+
+.project-card {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.project-card.show {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 body {
   margin: 0;
@@ -126,6 +150,16 @@ h1, .h1 {
   h1, .h1 {
     font-size: 2.5rem;
   }
+}
+@keyframes fade {
+  0% { opacity: 1; }
+  33.33% { opacity: 0; }
+  66.66% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.switching-text {
+  animation: fade 3s infinite;
 }
 
 h2, .h2 {
