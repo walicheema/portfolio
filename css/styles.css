@@ -93,6 +93,7 @@
 .dark-mode {
   background-color: #1a1a1a; /* Set the background color to a dark color */
   color: #ffffff; /* Set the text color to a light color */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .dark-mode .navbar {
@@ -159,7 +160,7 @@ h1, .h1 {
 }
 
 .switching-text {
-  animation: fade 3s infinite;
+  animation: fade 0.5s infinite;
 }
 
 h2, .h2 {
@@ -242,6 +243,15 @@ dt {
 dd {
   margin-bottom: 0.5rem;
   margin-left: 0;
+}
+
+phrase {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+phrase.fade {
+  opacity: 1;
 }
 
 blockquote {
